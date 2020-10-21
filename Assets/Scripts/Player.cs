@@ -4,15 +4,47 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public List<Transform> Lapins ;
+    public int target = 0;
+    public Vector3 lapinPos;
+    private Animator Frappe;
+
+
+
     void Start()
     {
-        
+        Frappe = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetButtonDown("PreviousLapin"))
+        {
+            target--;
+        }
+        if (Input.GetButtonDown("NextLapin"))
+        {
+            target++;
+        }
+
+        if(Input.GetButtonDown("Jump"))
+        { 
+            Frappe.SetTrigger("frappe");
+
+        }
+
+        if (target <0)
+        {
+            target += Lapins.Count;
+        }
+        target = target % (Lapins.Count);
+        target = Mathf.Clamp(target, 0, Lapins.Count-1);
+
+        lapinPos = Lapins[target].position ;
+        transform.position = Vector3.Lerp(transform.position,lapinPos,Time.deltaTime*5);
+
+
     }
+
+
 }
