@@ -48,7 +48,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371096390860657180}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ef31b448ba7ed34478319a41c1e42ed8, type: 2}
   m_CullingMode: 0
@@ -70,8 +70,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.966919, y: 10.509857, z: 4.45}
-  m_Center: {x: 0.06830883, y: 3.187706, z: 0}
+  m_Size: {x: 5.966919, y: 7.017782, z: 4.45}
+  m_Center: {x: 0.06830883, y: 1.4416685, z: 0}
 --- !u!114 &5063930885176416840
 MonoBehaviour:
   m_ObjectHideFlags: 0
