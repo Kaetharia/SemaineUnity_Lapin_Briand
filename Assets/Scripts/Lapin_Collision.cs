@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine.UI;using UnityEngine;
+
 
 public class Lapin_Collision : MonoBehaviour
 {
     public Animator animLapin;
     private float invincible = 0.0f;
+    public static int score = 0;
+
+
     void Start()
     {
         //animLapin = GetComponent<Animator>();
@@ -25,7 +29,8 @@ public class Lapin_Collision : MonoBehaviour
             animLapin.SetTrigger("Tapper");
             Debug.Log("Pouf");
             invincible = 1.0f;
-            
+            ScoreScript.scoreValue += 1;
+         
 
         }
 
